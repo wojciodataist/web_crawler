@@ -1,6 +1,8 @@
 import sys
 import asyncio
 from crawl import crawl_site_async
+from csv_report import write_csv_report
+
 
 async def main():
     args = sys.argv
@@ -30,8 +32,9 @@ async def main():
     for page in page_data.values():
         print(f"Found {len(page['outgoing_links'])} outgoing links on {page['url']}")
     
-    sys.exit(0)
+    write_csv_report(page_data)
 
+    sys.exit(0)
 
 if __name__ == "__main__":
     asyncio.run(main())
