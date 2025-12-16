@@ -1,5 +1,5 @@
 import unittest
-from crawl import normalize_url, get_h1_from_html, get_first_paragraph_from_html, get_urls_from_html, get_images_from_html, extract_page_data
+from crawl import normalize_url, get_h1_from_html, get_first_paragraph_from_html, get_urls_from_html, get_images_from_html, extract_page_data, get_html
 
 
 class TestCrawl(unittest.TestCase):
